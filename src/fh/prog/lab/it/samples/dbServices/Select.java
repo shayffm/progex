@@ -45,9 +45,9 @@ public class Select {
 		
 		while(this.rs.next()){
 			
-			System.out.println("The Name    : " + rs.getString(1));
-			System.out.println("The Surname : " + rs.getString(2));
-			System.out.println("The Id      : " + rs.getString(3));
+			System.out.println("ID		: " + rs.getString(1));
+			System.out.println("Product Name	: " + rs.getString(2));
+			System.out.println("Version#	: " + rs.getString(3));
 			System.out.println("--------------------------");
 		}
 		

@@ -11,6 +11,7 @@ public class Controller implements ActionListener{
 		// TODO Auto-generated method stub
 		switch (trigger) {
 		case 1: System.out.println("Hallo");
+		case 2: //do something
 		default:
 			break;
 		}

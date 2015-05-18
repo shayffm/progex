@@ -21,6 +21,7 @@ import com.sun.medialib.mlib.Image;
 			frame.setSize(800, 600);
 			panel.setLayout(layout);
 			
+			
 		}
 	
 }

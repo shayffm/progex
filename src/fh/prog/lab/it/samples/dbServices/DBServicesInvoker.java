@@ -23,12 +23,12 @@ public class DBServicesInvoker {
 	 */
 	//Credentials will be taken from here
 	//******************************************
-	private String urlPrefix = "jdbc:mysql://rdbms.strato.de";
-	private String dbName = "DB2128589";
-	private String dbTableName = "info";
+	private String urlPrefix = "jdbc:mysql://10.18.2.44";
+	private String dbName = "sharknado";
+	private String dbTableName = "Produkt";
 	private String driver = "com.mysql.jdbc.Driver";
-	private String userName = "U2128589";
-	private String password ="Progex2015";
+	private String userName = "user";
+	private String password ="programmingLab";
 	private String port = "3306";
 //	private String host = "127.0.0.1";
 	//*******************************************
@@ -36,7 +36,6 @@ public class DBServicesInvoker {
 	private String query = "select * from info";
 	Statement stmt = null;
 	ResultSet rs = null;
-	
 	public DBServicesInvoker() {
 
 		try {
@@ -65,7 +64,7 @@ public class DBServicesInvoker {
 				openConnection();
 			
 			Select select = new Select(this.conn);
-			select.doSelect("info");
+			select.doSelect("Produkt");
 			
 			select.closeDB();
 			

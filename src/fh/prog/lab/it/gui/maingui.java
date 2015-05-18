@@ -9,8 +9,8 @@ import javax.swing.JPanel;
 import com.sun.medialib.mlib.Image;
 
 	public class maingui {
-	private String title = "Sharknado Synergy Base v0.1";
-	private Image vertrieb,inventur,werbung,statistik,managment;
+	private String title = "Sharknado Synergy Base v0.1.1";
+	private Image vertrieb, inventur, werbung, statistik, managment;
 	
 		public maingui(){
 			JFrame frame = new JFrame(title);

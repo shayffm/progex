@@ -10,7 +10,7 @@ import com.sun.medialib.mlib.Image;
 
 	public class maingui {
 	private String title = "Sharknado Synergy Base v0.1";
-	private Image vertrieb,inventur,werbung,statistik,managment;
+	public Image vertrieb,inventur,werbung,statistik,managment;
 	
 		public maingui(){
 			JFrame frame = new JFrame(title);
@@ -20,7 +20,6 @@ import com.sun.medialib.mlib.Image;
 			
 			frame.setSize(800, 600);
 			panel.setLayout(layout);
-			
 			
 		}
 	

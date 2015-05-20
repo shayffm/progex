@@ -19,7 +19,7 @@ public class runHere {
 	 */
 	public static void main(String[] args) {
 
-		// new mainframe();
+		new mainframe();
 		DBServicesInvoker dbService = new DBServicesInvoker();
 		try {
 			

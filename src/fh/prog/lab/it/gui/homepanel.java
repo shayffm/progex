@@ -8,6 +8,6 @@ public class homepanel extends JPanel{
 	URL kunden;
 	URL vertrieb;
 	public homepanel(){
-		
+		System.out.println("HomePanel wurde gestartet");
 	}
 }

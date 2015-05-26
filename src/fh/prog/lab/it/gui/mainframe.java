@@ -13,13 +13,16 @@ public class mainframe {
 		double width = screenSize.getWidth();
 		double height = screenSize.getHeight();
 		JFrame frame = new JFrame(title);
-		frame.setSize((int)width/2, (int)height);
-		frame.setVisible(true);
-		frame.setLocationRelativeTo(null);
-		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
+
 	
 		JPanel home = new homepanel();
 		frame.add(home);
+
+		frame.setSize(800, (int)height);
+		frame.setVisible(true);
+		frame.setResizable(false);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
 	
 	}
 

@@ -1,9 +1,11 @@
 package fh.prog.lab.it.gui;
 
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 
 import javax.swing.JFrame;
+import javax.swing.JMenuBar;
 import javax.swing.JPanel;
 
 public class mainframe {
@@ -13,11 +15,13 @@ public class mainframe {
 		double width = screenSize.getWidth();
 		double height = screenSize.getHeight();
 		JFrame frame = new JFrame(title);
-
+		frame.setLayout(new BorderLayout());
+		JMenuBar menubar = new menubar();
+		frame.add(menubar,BorderLayout.NORTH);
 	
 		JPanel home = new homepanel();
-		frame.add(home);
-
+		frame.add(home,BorderLayout.CENTER);
+		
 		frame.setSize((int)width/2, (int)height);
 		frame.setVisible(true);
 		frame.setResizable(false);

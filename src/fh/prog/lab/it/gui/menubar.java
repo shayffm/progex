@@ -1,8 +1,14 @@
 package fh.prog.lab.it.gui;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 
-public class menubar extends JMenuBar{
+import fh.prog.lab.it.controller.Controller;
+
+public class menubar extends JMenuBar {
+
 	JMenu file = new JMenu("Datei");
 	JMenu edit = new JMenu("Bearbeiten");
 	JMenu window = new JMenu("Fenster");
@@ -21,5 +27,8 @@ public class menubar extends JMenuBar{
 		add(window);
 		add(help);
 		help.add(about);
+		
+	
 	}
+	
 }

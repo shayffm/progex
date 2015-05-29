@@ -13,14 +13,17 @@ public class mainframe{
 	Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 	private String title = "Sharknado SynergyBase Beta 0.1";
 	JFrame frame = new JFrame(title);
+	JPanel home = new homepanel();
 	public mainframe(){
+		JFrame frame = new JFrame(title);
+		JPanel home = new homepanel();
+
 		double width = screenSize.getWidth();
 		double height = screenSize.getHeight();
 		frame.setLayout(new BorderLayout());
 		JMenuBar menubar = new menubar();
 		frame.add(menubar,BorderLayout.NORTH);
 	
-		JPanel home = new homepanel();
 		frame.add(home,BorderLayout.CENTER);
 		
 		

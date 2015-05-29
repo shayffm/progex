@@ -5,9 +5,9 @@ import fh.prog.lab.it.gui.mainframe;
 import fh.prog.lab.it.gui.menubar;
 
 
-
 public class Controller implements ActionListener{
 
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		int trigger = 0;

@@ -13,6 +13,7 @@ public class menubar extends JMenuBar {
 	JMenu edit = new JMenu("Bearbeiten");
 	JMenu window = new JMenu("Fenster");
 	JMenu help = new JMenu("Hilfe");
+	JMenu settings = new JMenu("Einstellungen");
 	
 	JMenuItem neu = new JMenuItem("Neu");
 	JMenuItem exit = new JMenuItem("Schliessen");
@@ -23,8 +24,9 @@ public class menubar extends JMenuBar {
 		add(file);
 		file.add(neu);
 		file.add(exit);
-		add(edit);
-		add(window);
+		add(settings);
+		settings.add(edit);
+		settings.add(window);
 		add(help);
 		help.add(about);
 		

@@ -14,7 +14,8 @@ public class Controller implements ActionListener{
 		
 		switch (trigger) {
 		case 1: System.out.println("Hallo");
-		case 2: //do something
+		case 2: System.exit(0);
+		
 		default:
 			break;
 		}

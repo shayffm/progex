@@ -14,7 +14,7 @@ public class runHere {
 	 */
 	public static void main(String[] args) {
 		
-		new gui_controller();
+		new mainframe();
 		DBServicesInvoker dbService = new DBServicesInvoker();
 		try {
 			

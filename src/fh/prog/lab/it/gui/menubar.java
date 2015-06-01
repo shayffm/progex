@@ -22,7 +22,7 @@ public class menubar extends JMenuBar {
 	JMenu help = new JMenu("Hilfe");
 	JMenuItem help_content = new JMenuItem("Anleitung");
 	JMenuItem contact = new JMenuItem("Kontaktieren");
-	JMenuItem about = new JMenuItem("Über Sharknado SynergyBase");
+	JMenuItem about = new JMenuItem("Ueber Sharknado SynergyBase");
 	
 	public menubar(){
 		add(file);

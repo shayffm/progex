@@ -48,7 +48,7 @@ public class Select {
 			System.out.println("ID		: " + rs.getString(1));
 			System.out.println("Product Name	: " + rs.getString(2));
 			System.out.println("Version#	: " + rs.getString(3));
-			System.out.println("Preis	: " + rs.getString(4));
+			System.out.println("Preis		: " + rs.getString(4));
 			if(rs.getString(5) != "N/A"){
 			System.out.println("SysAnforderung	: " + rs.getString(5));
 			} else continue;

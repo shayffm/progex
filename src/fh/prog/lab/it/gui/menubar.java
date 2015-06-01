@@ -5,8 +5,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-import fh.prog.lab.it.controller.Controller;
-
 public class menubar extends JMenuBar {
 
 	JMenu file = new JMenu("Datei");

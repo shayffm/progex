@@ -15,17 +15,10 @@ public class mainframe{
 	JFrame frame = new JFrame(title);
 	JPanel home = new homepanel();
 	public mainframe(){
-		JFrame frame = new JFrame(title);
-		JPanel home = new homepanel();
+		frame.setLayout(new BorderLayout());
 
 		double width = screenSize.getWidth();
 		double height = screenSize.getHeight();
-		frame.setLayout(new BorderLayout());
-		JMenuBar menubar = new menubar();
-		frame.add(menubar,BorderLayout.NORTH);
-	
-		frame.add(home,BorderLayout.CENTER);
-		
 		
 		frame.setSize((int)width/2, (int)height);
 		frame.setVisible(true);

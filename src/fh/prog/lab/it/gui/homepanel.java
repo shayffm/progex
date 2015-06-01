@@ -11,8 +11,6 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import fh.prog.lab.it.controller.Controller;
-
 
 
 public class homepanel extends JPanel implements ActionListener {

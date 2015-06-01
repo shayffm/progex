@@ -16,7 +16,6 @@ public class mainframe{
 	JPanel home = new homepanel();
 	public mainframe(){
 		frame.setLayout(new BorderLayout());
-
 		double width = screenSize.getWidth();
 		double height = screenSize.getHeight();
 		

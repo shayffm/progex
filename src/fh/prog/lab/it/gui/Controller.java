@@ -10,8 +10,7 @@ public class Controller implements ActionListener{
 	menubar bar = new menubar(); 
 	homepanel hpanel = new homepanel();
 	public void Controller(){
-		main.frame.add(bar,BorderLayout.NORTH );
-		main.frame.add(hpanel,BorderLayout.CENTER);
+		
 	}
 	
 	@Override

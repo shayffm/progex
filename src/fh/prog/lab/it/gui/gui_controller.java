@@ -4,7 +4,6 @@ public class gui_controller {
 	private int con = 0;
 	
 	public gui_controller(){
-//		mainframe main = new mainframe();
 		switch (con) {
 		case 1: //main.home.setVisible(false);
 			

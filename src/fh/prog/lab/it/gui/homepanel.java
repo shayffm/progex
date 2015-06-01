@@ -26,7 +26,7 @@ public class homepanel extends JPanel implements ActionListener {
 	JButton jvertrieb = new JButton(vertriebicon);
 	JButton jbestellung = new JButton(bestellungicon);
 	JButton jmanage = new JButton(manageicon);
-	public homepanel(){
+	public homepanel(ActionListener listener){
 		System.out.println("HomePanel wurde gestartet");
 		produkticon.setDescription("Produkte");
 		setLayout(new GridLayout(2,4));
@@ -39,6 +39,7 @@ public class homepanel extends JPanel implements ActionListener {
 		
 		setVisible(true);
 	}
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == jprodukt) {

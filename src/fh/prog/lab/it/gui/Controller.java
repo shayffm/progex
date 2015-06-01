@@ -7,8 +7,6 @@ import com.sun.org.apache.bcel.internal.generic.NEW;
 
 public class Controller implements ActionListener{
 	mainframe main = new mainframe();
-	menubar bar = new menubar(); 
-	homepanel hpanel = new homepanel();
 	public void Controller(){
 		
 	}

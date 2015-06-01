@@ -10,16 +10,20 @@ import fh.prog.lab.it.controller.Controller;
 public class menubar extends JMenuBar {
 
 	JMenu file = new JMenu("Datei");
-	JMenu edit = new JMenu("Bearbeiten");
-	JMenu window = new JMenu("Fenster");
-	JMenu help = new JMenu("Hilfe");
-	JMenu settings = new JMenu("Einstellungen");
-	
 	JMenuItem neu = new JMenuItem("Neu");
 	JMenuItem exit = new JMenuItem("Schliessen");
 	
 	
-	JMenuItem about = new JMenuItem("Ãœber uns");
+	JMenu settings = new JMenu("Einstellungen");
+	JMenuItem edit = new JMenuItem("Bearbeiten");
+	JMenuItem window = new JMenuItem("Fenster");
+	
+	
+	JMenu help = new JMenu("Hilfe");
+	JMenuItem help_content = new JMenuItem("Anleitung");
+	JMenuItem contact = new JMenuItem("Kontaktieren");
+	JMenuItem about = new JMenuItem("Über Sharknado SynergyBase");
+	
 	public menubar(){
 		add(file);
 		file.add(neu);

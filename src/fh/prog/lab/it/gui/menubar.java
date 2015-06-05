@@ -32,6 +32,7 @@ public class menubar extends JMenuBar {
 		add(help);
 		help.add(about);
 		
+		
 		exit.addActionListener(listener);
 		
 	

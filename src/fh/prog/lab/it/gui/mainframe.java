@@ -17,7 +17,7 @@ public class mainframe{
 
 	public mainframe(ActionListener listener){
 		JPanel home = new homepanel(listener);
-		JMenuBar bar = new menubar(listener);
+		menubar bar = new menubar(listener);
 		frame.setLayout(new BorderLayout());
 		double width = screenSize.getWidth();
 		double height = screenSize.getHeight();

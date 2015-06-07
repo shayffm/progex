@@ -17,16 +17,17 @@ public class mainframe{
 	homepanel home; 
 	produktpanel produkt;
 	public mainframe(ActionListener listener){
-		home = new homepanel(listener);
-		produkt = new produktpanel();
 		menubar bar = new menubar(listener);
+		home = new homepanel(listener);	
+		produkt = new produktpanel();
 		frame.setLayout(new BorderLayout());
 		double width = screenSize.getWidth();
 		double height = screenSize.getHeight();
 		frame.add(bar,BorderLayout.NORTH);
 		frame.add(produkt,BorderLayout.CENTER);
-		frame.add(home,BorderLayout.CENTER);
-		
+		frame.add(home);
+		produkt.setVisible(true);
+		home.setVisible(false);
 		
 		
 		frame.setSize((int)width/2, (int)height);

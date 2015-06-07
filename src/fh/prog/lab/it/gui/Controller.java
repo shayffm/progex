@@ -16,17 +16,10 @@ public class Controller implements ActionListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		String test = e.getSource().toString(); 
-		System.out.println(test);
-		if(e.getSource() == menu.exit){
-			System.out.println("Funktioniert");
-		}
-		System.out.println(e.getSource().toString() + "+" + menu.exit.getName());
-		String trigger = "";
-		System.out.println(test);
+		String trigger = e.getActionCommand();
 		switch (trigger) {
 		case "Start": System.out.println("Hallo");
-		case "Exit": System.exit(0);
+		case "exit": System.exit(0);
 		
 		default:
 			break;

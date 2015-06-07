@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 
 
 
-public class homepanel extends JPanel implements ActionListener {
+public class homepanel extends JPanel{
 	gui_controller control = new gui_controller();
 	URL kunden;
 	URL vertrieb;
@@ -35,20 +35,17 @@ public class homepanel extends JPanel implements ActionListener {
 		add(jbestellung);
 		add(jmanage);
 		
-		jprodukt.addActionListener(this);
+		jprodukt.addActionListener(listener);
+		jprodukt.setActionCommand("produkt");
+		jvertrieb.addActionListener(listener);
+		jvertrieb.setActionCommand("vertrieb");
+		jbestellung.addActionListener(listener);
+		jbestellung.setActionCommand("bestellung");
+		jmanage.addActionListener(listener);
+		jmanage.setActionCommand("manage");
 		
 		setVisible(true);
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == jprodukt) {
-			control.setCon(1);
-		} else {
-			
-		}
-		
-	}
-	
-	
+
 }

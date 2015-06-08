@@ -3,6 +3,8 @@ import java.awt.BorderLayout;
 import java.awt.event.*;
 import java.awt.*;
 
+import javax.swing.SwingUtilities;
+
 import com.sun.org.apache.bcel.internal.generic.NEW;
 
 import fh.prog.lab.it.main.Main;
@@ -30,8 +32,9 @@ public class Controller implements ActionListener{
 			break;
 		case "exit":	System.exit(0);
 			break;
-		case "refresh":	main.dispose();
-						main = new mainframe(this);
+		case "refresh": main.frame.setVisible(false);
+						main.frame.setVisible(true);
+			break;
 		default:
 			break;
 		}

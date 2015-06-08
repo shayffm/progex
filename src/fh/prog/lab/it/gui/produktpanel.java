@@ -21,7 +21,6 @@ public class produktpanel extends JPanel{
 		this.setSize((int)(width/2), (int)(height/100)*70);
 		setLayout(new GridLayout(4,2));
 		add(test);
-		add(test2);	
 				
 	}
 	

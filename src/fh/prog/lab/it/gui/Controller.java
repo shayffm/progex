@@ -1,6 +1,7 @@
 package fh.prog.lab.it.gui;
 import java.awt.BorderLayout;
 import java.awt.event.*;
+import java.awt.*;
 
 import com.sun.org.apache.bcel.internal.generic.NEW;
 
@@ -29,7 +30,8 @@ public class Controller implements ActionListener{
 			break;
 		case "exit":	System.exit(0);
 			break;
-		
+		case "refresh":	main.dispose();
+						main = new mainframe(this);
 		default:
 			break;
 		}

@@ -22,20 +22,30 @@ public class menubar extends JMenuBar {
 	JMenuItem contact = new JMenuItem("Kontaktieren");
 	JMenuItem about = new JMenuItem("Ueber Sharknado SynergyBase");
 	
+	JMenu debug = new JMenu("Debug");
+	JMenuItem refresh = new JMenuItem("Refresh");
+	
 	public menubar(ActionListener listener){
 		add(file);
 		file.add(neu);
 		file.add(exit);
+				exit.setActionCommand("exit");
+				exit.addActionListener(listener);
+		
 		add(settings);
 		settings.add(edit);
 		settings.add(window);
+		
+		
 		add(help);
 		help.add(about);
 		
+		add(debug);
+		debug.add(refresh);
+				refresh.setActionCommand("refresh");
+				refresh.addActionListener(listener);
 		
-		exit.setActionCommand("exit");
-		exit.addActionListener(listener);
-		
+			
 	
 	}
 	

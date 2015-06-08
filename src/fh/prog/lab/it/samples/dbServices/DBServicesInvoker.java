@@ -74,4 +74,8 @@ public class DBServicesInvoker {
 		}
 		
 	}
+	
+	public void startnewselect(){
+		newselect select = new newselect(this.conn);
+	}
 	}

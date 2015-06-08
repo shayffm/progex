@@ -16,6 +16,7 @@ public class mainframe{
 	JFrame frame = new JFrame(title);
 	homepanel home; 
 	produktpanel produkt;
+	
 	public mainframe(ActionListener listener){
 		menubar bar = new menubar(listener);
 		home = new homepanel(listener);	

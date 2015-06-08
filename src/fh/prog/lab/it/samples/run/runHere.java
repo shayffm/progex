@@ -12,8 +12,9 @@ public class runHere {
 
 	/**
 	 * @param args
+	 * @throws SQLException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		
 		new Controller();
 		DBServicesInvoker dbService = new DBServicesInvoker();

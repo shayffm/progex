@@ -2,6 +2,7 @@ package fh.prog.lab.it.gui;
 import java.awt.BorderLayout;
 import java.awt.event.*;
 import java.awt.*;
+import java.sql.SQLException;
 
 import javax.swing.SwingUtilities;
 
@@ -16,7 +17,7 @@ public class Controller implements ActionListener{
 	 homepanel home;
 	 produktpanel produkt;
 	 
-	public Controller(){
+	public Controller() throws SQLException{
 		System.out.println("Controller Gestartet");
 		main = new mainframe(this);
 	}

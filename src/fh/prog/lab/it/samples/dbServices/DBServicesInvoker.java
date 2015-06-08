@@ -75,7 +75,12 @@ public class DBServicesInvoker {
 		
 	}
 	
-	public void startnewselect(){
-		newselect select = new newselect(this.conn);
+	public void startnewselect(String table) throws SQLException{
+		try {
+			newselect select = new newselect(conn,table);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	}

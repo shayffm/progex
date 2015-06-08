@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.Toolkit;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 import javax.swing.JFrame;
 import javax.swing.JMenuBar;
@@ -17,7 +18,7 @@ public class mainframe{
 	homepanel home; 
 	produktpanel produkt;
 	
-	public mainframe(ActionListener listener){
+	public mainframe(ActionListener listener) throws SQLException{
 		menubar bar = new menubar(listener);
 		home = new homepanel(listener);	
 		produkt = new produktpanel();

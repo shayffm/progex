@@ -26,7 +26,7 @@ public class homepanel extends JPanel{
 	JButton jvertrieb = new JButton(vertriebicon);
 	JButton jbestellung = new JButton(bestellungicon);
 	JButton jmanage = new JButton(manageicon);
-	public homepanel(ActionListener listener){
+	protected homepanel(ActionListener listener){
 		System.out.println("HomePanel wurde gestartet");
 		produkticon.setDescription("Produkte");
 		setLayout(new GridLayout(2,4));

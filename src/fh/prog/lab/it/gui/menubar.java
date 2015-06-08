@@ -25,7 +25,7 @@ public class menubar extends JMenuBar {
 	JMenu debug = new JMenu("Debug");
 	JMenuItem refresh = new JMenuItem("Refresh");
 	
-	public menubar(ActionListener listener){
+	protected menubar(ActionListener listener){
 		add(file);
 		file.add(neu);
 		file.add(exit);

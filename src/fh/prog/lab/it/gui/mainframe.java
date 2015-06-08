@@ -26,7 +26,6 @@ public class mainframe{
 		frame.add(bar,BorderLayout.NORTH);
 		frame.add(produkt,BorderLayout.CENTER);
 		frame.add(home);
-		produkt.setVisible(true);
 		home.setVisible(true);
 		
 		

@@ -35,14 +35,17 @@ public class homepanel extends JPanel{
 		add(jbestellung);
 		add(jmanage);
 		
-		jprodukt.addActionListener(listener);
 		jprodukt.setActionCommand("produkt");
-		jvertrieb.addActionListener(listener);
+		jprodukt.addActionListener(listener);
+		
 		jvertrieb.setActionCommand("vertrieb");
-		jbestellung.addActionListener(listener);
+		jvertrieb.addActionListener(listener);
+				
 		jbestellung.setActionCommand("bestellung");
-		jmanage.addActionListener(listener);
+		jbestellung.addActionListener(listener);
+		
 		jmanage.setActionCommand("manage");
+		jmanage.addActionListener(listener);
 		
 		setVisible(true);
 	}

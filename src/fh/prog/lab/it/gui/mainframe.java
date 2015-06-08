@@ -27,7 +27,7 @@ public class mainframe{
 		frame.add(produkt,BorderLayout.CENTER);
 		frame.add(home);
 		produkt.setVisible(true);
-		home.setVisible(false);
+		home.setVisible(true);
 		
 		
 		frame.setSize((int)width/2, (int)height);

@@ -30,7 +30,7 @@ public class mainframe{
 		home.setVisible(true);
 		
 		
-		frame.setSize((int)width/2, (int)height);
+		frame.setSize((int)(width/2), (int)(height/100)*70);
 		frame.setVisible(true);
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);

@@ -15,5 +15,8 @@ public class produktpanel extends JPanel{
 		setLayout(new GridLayout(4,2));
 		add(test);
 		setVisible(true);
+		
+		
+		
 	}
 }

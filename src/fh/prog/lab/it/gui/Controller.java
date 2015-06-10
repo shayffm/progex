@@ -29,6 +29,7 @@ public class Controller implements ActionListener{
 		case "Start": 	System.out.println("Hallo");
 			break;
 		case "produkt": main.home.setVisible(false);
+						main.frame.add(main.produkt,BorderLayout.CENTER);
 						main.produkt.setVisible(true);
 			break;
 		case "exit":	System.exit(0);

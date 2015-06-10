@@ -22,6 +22,7 @@ public class Select {
 	Statement stmt = null;
 	ResultSet rs = null;
 	Connection conn = null;
+	String query = null;
 	
 	public Select(Connection conn) {
 		
@@ -32,7 +33,7 @@ public class Select {
 		
 		boolean success = false;
 		int colCounter = 0;
-		String query = "select * from " + table;
+		query = "select * from " + table;
 		
 		this.stmt = conn.createStatement();
 		this.rs = stmt.executeQuery(query);
@@ -44,7 +45,7 @@ public class Select {
 		System.out.println("--------------------------");
 		
 		while(this.rs.next()){
-			
+			System.out.println(colInfo.getColumnName(1));
 			System.out.println("ID		: " + rs.getString(1));
 			System.out.println("Product Name	: " + rs.getString(2));
 			System.out.println("Version#	: " + rs.getString(3));

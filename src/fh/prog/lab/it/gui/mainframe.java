@@ -26,8 +26,7 @@ public class mainframe{
 		double width = screenSize.getWidth();
 		double height = screenSize.getHeight();
 		frame.add(bar,BorderLayout.NORTH);
-		frame.add(produkt,BorderLayout.CENTER);
-		frame.add(home);
+		frame.add(home,BorderLayout.CENTER);
 		home.setVisible(true);
 		
 		

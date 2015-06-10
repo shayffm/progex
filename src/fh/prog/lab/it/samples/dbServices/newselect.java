@@ -8,40 +8,38 @@ import java.sql.Statement;
 import java.util.Vector;
 
 public class newselect {
-
-	Statement stmt = null;
-	ResultSet rs = null;
-	Connection conn = null;
-	ResultSetMetaData meta = null;
-	int count = 0;
+	Select sel = new Select(new DBServicesInvoker().conn);
+	ResultSet res = null;
 	
-	public newselect(Connection conn,String table) throws SQLException {
-		
-		this.conn = conn;
-		String query = "Select * from" + table;
-		stmt = conn.createStatement();
-		rs = stmt.executeQuery(query);
-		meta = rs.getMetaData();
-		count = meta.getColumnCount();
-	}
-	
-	public Vector getColumnNames() throws SQLException{
-		Vector<String> columnName = new Vector<String>();
-		for (int i = 1; i < count; i++) {
-			columnName.add(this.meta.getColumnName(i));
+	/*
+	 * Speichert die Spaltennamen als Vector und liefert Sie zurück
+	 * @param String table name
+	 * Furkan Yücel
+	 */
+	public Vector getColumnNames(String table) throws SQLException{
+		Vector<String> name = new Vector<String>();
+		int colCounter = 0;
+		res = sel.stmt.executeQuery("select * from " + table);
+		ResultSetMetaData data = res.getMetaData();
+		colCounter = data.getColumnCount();
+		for (int i = 0; i < colCounter; i++) {
+			name.add(data.getColumnName(i+1));
 		}
-		return columnName;
+		
+		return name; 
 	}
 	
-	public Vector getData() throws SQLException{
-		Vector<Vector<Object>> data = new Vector<Vector<Object>>();
-		while (rs.next()) {
-			Vector<Object> inhalt = new Vector<Object>();
-			for (int i = 1; i < count; i++) {
-				inhalt.add(rs.getObject(i));
-			}
-			data.add(inhalt);
+	public Vector getData(String table) throws SQLException{
+		int i = 0;
+		Vector<String> data = new Vector<String>();
+		
+		res = sel.stmt.executeQuery("select * from" + table);
+		ResultSetMetaData dat = res.getMetaData();
+		while (res.next()) {
+			data.add(res.getNString(i+1));
+			i++;
 		}
 		return data;
+		
 	}
 }

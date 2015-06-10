@@ -29,8 +29,8 @@ public class produktpanel extends JPanel{
 		setLayout(new GridLayout(4,2));
 		add(test);
 				
-		select = new newselect(service.conn, "Produkt");
-		table = new JTable(select.getData(), select.getColumnNames());
+		select = new newselect();
+		table = new JTable(select.getData("Produkt"), select.getColumnNames("Produkt"));
 		add(new JScrollPane(table));
 	}
 	

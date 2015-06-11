@@ -13,13 +13,14 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 import fh.prog.lab.it.samples.dbServices.DBServicesInvoker;
+import fh.prog.lab.it.samples.dbServices.Select;
 import fh.prog.lab.it.samples.dbServices.newselect;
 
 public class produktpanel extends JPanel{
 	DBServicesInvoker service;
-	newselect select;
 	JTable table;
 	JLabel test = new JLabel("Test");
+	newselect select = new newselect();
 	public produktpanel() throws SQLException{
 		System.out.println("Produktpanel wurde gestartet");
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -28,9 +29,8 @@ public class produktpanel extends JPanel{
 		this.setSize((int)(width/2), (int)(height/100)*70);
 		setLayout(new GridLayout(4,2));
 		add(test);
-				
-		select = new newselect();
-		table = new JTable(select.getData("Produkt"), select.getColumnNames("Produkt"));
+
+		table = new JTable(select.getData("Produkt"),select.getColumnNames("Produkt"));
 		add(new JScrollPane(table));
 	}
 	

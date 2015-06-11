@@ -16,9 +16,12 @@ public class newselect {
 	 * @param String table name
 	 * Furkan Yücel
 	 */
-	public Vector getColumnNames(String table) throws SQLException{
+	public Vector<String> getColumnNames(String table) throws SQLException{
 		Vector<String> name = new Vector<String>();
 		int colCounter = 0;
+		/*
+		 * Hier kommt der nicht in den Block rein.. Spuckt nullpointer exception aus 
+		 */
 		try {
 
 			res = sel.stmt.executeQuery("select * from " + table);
@@ -29,15 +32,18 @@ public class newselect {
 			}
 			
 		} catch (Exception e) {
-			System.out.println("Fehler" + e.getMessage());
+			System.out.println("Fehler: " + e.getMessage());
 		}
 		return name; 
 	}
 	
-	public Vector getData(String table) throws SQLException{
+	public Vector<String> getData(String table) throws SQLException{
 		Vector<String> data = new Vector<String>();
+		/*
+		 * Hier kommt der nicht in den Block rein.. Spuckt nullpointer exception aus 
+		 */
 			try {
-
+				
 				res = sel.stmt.executeQuery(sel.query);
 				ResultSetMetaData dat = res.getMetaData();
 				while (this.res.next()) {
@@ -48,7 +54,7 @@ public class newselect {
 					data.add(res.getString("Systemvoraussetzung\n"));
 				}
 			} catch (Exception e) {
-				System.out.println("Fehler" + e.getMessage());
+				System.out.println("Fehler: " + e.getMessage());
 			}
 		
 		return data;

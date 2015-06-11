@@ -17,11 +17,13 @@ public class mainframe{
 	JFrame frame = new JFrame(title);
 	homepanel home; 
 	produktpanel produkt;
+	kundenpanel kunden;
 	
 	public mainframe(ActionListener listener) throws SQLException{
 		menubar bar = new menubar(listener);
 		home = new homepanel(listener);	
 		produkt = new produktpanel();
+		kunden = new kundenpanel();
 		frame.setLayout(new BorderLayout());
 		double width = screenSize.getWidth();
 		double height = screenSize.getHeight();

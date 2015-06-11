@@ -16,6 +16,7 @@ public class Controller implements ActionListener{
 	 mainframe main;
 	 homepanel home;
 	 produktpanel produkt;
+	 kundenpanel kunden;
 	 
 	public Controller() throws SQLException{
 		System.out.println("Controller Gestartet");
@@ -36,6 +37,10 @@ public class Controller implements ActionListener{
 			break;
 		case "refresh": main.frame.setVisible(false);
 						main.frame.setVisible(true);
+			break;
+		case "kunden": 	main.home.setVisible(false);
+					   	main.frame.add(main.kunden,BorderLayout.CENTER);
+					   	main.kunden.setVisible(true);
 			break;
 		default:
 			break;

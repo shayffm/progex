@@ -29,7 +29,7 @@ public class Select {
 		this.conn = conn;
 	}
 
-	public boolean doSelect(String table) throws SQLException{
+	public ResultSet doSelect(String table) throws SQLException{
 		
 		boolean success = false;
 		int colCounter = 0;
@@ -57,7 +57,7 @@ public class Select {
 		}
 		
 		
-		return success;
+		return this.rs;
 		
 	}
 	

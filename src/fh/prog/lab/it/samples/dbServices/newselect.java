@@ -24,7 +24,7 @@ public class newselect {
 		 */
 		try {
 
-			res = sel.stmt.executeQuery("select * from " + table);
+			res = sel.doSelect("Produkt");
 			ResultSetMetaData data = res.getMetaData();
 			colCounter = data.getColumnCount();
 			for (int i = 0; i < colCounter; i++) {
@@ -44,15 +44,10 @@ public class newselect {
 		 */
 			try {
 				
-				res = sel.stmt.executeQuery(sel.query);
+				res = sel.doSelect("Produkt");
 				ResultSetMetaData dat = res.getMetaData();
-				while (this.res.next()) {
-					data.add(res.getString("Produkt-ID\n"));
-					data.add(res.getString("Name\n"));
-					data.add(res.getString("Versionsnummer\n"));
-					data.add(res.getString("Listenpreis\n"));
-					data.add(res.getString("Systemvoraussetzung\n"));
-				}
+				
+				
 			} catch (Exception e) {
 				System.out.println("Fehler: " + e.getMessage());
 			}

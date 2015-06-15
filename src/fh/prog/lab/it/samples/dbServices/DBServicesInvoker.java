@@ -64,7 +64,7 @@ public class DBServicesInvoker {
 				openConnection();
 			
 			Select select = new Select(this.conn);
-			select.doSelect("Produkt");
+			select.doSelect("fikus");
 			
 			select.closeDB();
 			

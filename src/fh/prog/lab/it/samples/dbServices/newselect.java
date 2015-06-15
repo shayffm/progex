@@ -43,8 +43,8 @@ public class newselect {
 		 * Hier kommt der nicht in den Block rein.. Spuckt nullpointer exception aus 
 		 */
 			try {
-				
-				res = sel.doSelect("Produkt");
+				int 
+				res = sel.doSelect(table);
 				ResultSetMetaData dat = res.getMetaData();
 				
 				

@@ -22,7 +22,6 @@ public class produktpanel extends JPanel{
 	JTable table;
 	JLabel test = new JLabel("Test");
 	newselect select = new newselect();
-	DefaultTableModel tab = new table().gettable("Produkt");
 	public produktpanel() throws SQLException{
 		System.out.println("Produktpanel wurde gestartet");
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -33,8 +32,8 @@ public class produktpanel extends JPanel{
 		add(test);
 
 
-		table = tab;
-		add(new JScrollPane(()table));
+		table = new JTable(select.getData("Produkt"), select.getColumnNames("Produkt"));
+		add(new JScrollPane((table)));
 	}
 	
 }

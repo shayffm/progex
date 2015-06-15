@@ -1,23 +1,22 @@
 package fh.prog.lab.it.gui;
 
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.sql.SQLException;
 
-import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
-
 import fh.prog.lab.it.samples.dbServices.DBServicesInvoker;
-import fh.prog.lab.it.samples.dbServices.Select;
 import fh.prog.lab.it.samples.dbServices.newselect;
 
 public class produktpanel extends JPanel{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	DBServicesInvoker service;
 	JTable table;
 	JLabel test = new JLabel("Test");

@@ -31,7 +31,6 @@ public class Select {
 
 	public ResultSet doSelect(String table) throws SQLException{
 		
-		boolean success = false;
 		int colCounter = 0;
 		query = "select * from " + table;
 		

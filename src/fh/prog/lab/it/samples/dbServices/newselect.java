@@ -9,6 +9,13 @@ import java.sql.Statement;
 import java.util.Vector;
 
 public class newselect {
+	
+	private String urlPrefix = "jdbc:mysql://10.18.2.44";
+	private String dbName = "sharknado";
+	private String userName = "user";
+	private String password ="programmingLab";
+	private String port = "3306";
+	
 	Select sel = new Select(new DBServicesInvoker().conn);
 	ResultSet res = null;
 	int colCounter = 0;
@@ -39,17 +46,7 @@ public class newselect {
 		return name; 
 	}
 	
-	private String urlPrefix = "jdbc:mysql://10.18.2.44";
-	private String dbName = "sharknado";
-	private String dbTableName = "Produkt";
-	private String driver = "com.mysql.jdbc.Driver";
-	private String userName = "user";
-	private String password ="programmingLab";
-	private String port = "3306";
-	
 	public Vector<Vector<String>> getData(String table) throws SQLException{
-		Vector<String> data = new Vector<String>();
-
 		Vector<String> spalte = new Vector<String>();
 		Vector<Vector<String>> gesamt = new Vector<Vector<String>>();
 		/*
@@ -61,8 +58,6 @@ public class newselect {
 		ResultSet rs = stmt.executeQuery("SELECT * FROM " + table);
 			try {
 				res = sel.doSelect(table);
-				ResultSetMetaData dat = res.getMetaData();
-				int count = 0;
 				int i = 1;
 				while(rs.next()){
 					System.out.println(i);

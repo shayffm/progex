@@ -24,7 +24,7 @@ public class newselect {
 		 */
 		try {
 
-			res = sel.doSelect("Produkt");
+			res = sel.doSelect(table);
 			ResultSetMetaData data = res.getMetaData();
 			colCounter = data.getColumnCount();
 			for (int i = 0; i < colCounter; i++) {

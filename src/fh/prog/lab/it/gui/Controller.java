@@ -37,6 +37,8 @@ public class Controller implements ActionListener{
 			break;
 		case "refresh": main.frame.setVisible(false);
 						main.frame.setVisible(true);
+						//setVisible macht keinen Refresh... 
+						//Es sollte den Frame komplett neuladen inkl. aller Befehle die für den Panel benutzt werden 
 			break;
 		case "kunden": 	main.home.setVisible(false);
 					   	main.frame.add(main.kunden,BorderLayout.CENTER);

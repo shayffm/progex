@@ -37,7 +37,7 @@ public class newselect {
 			ResultSetMetaData data = res.getMetaData();
 			colCounter = data.getColumnCount();
 			for (int i = 0; i < colCounter; i++) {
-				name.add(data.getColumnName(i+1));
+				name.add(data.getColumnName(++i));
 			}
 			
 		} catch (Exception e) {

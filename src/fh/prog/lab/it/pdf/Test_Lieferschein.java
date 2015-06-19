@@ -50,7 +50,10 @@ public class Test_Lieferschein {
         start.add(new Paragraph(strasseNr, fett));
         start.add(new Paragraph("D-" + plz + ort, fett));
         start.add(new Paragraph(tel, fett));
-        start.add(new Paragraph(fax+ "                                            "+datum, fett));
+        
+        
+        
+        start.add(new Paragraph(fax+ "                                                                 "+datum, fett));
         addEmptyLine(start, 1);
         start.add(new Paragraph(name + ", " + strasseNr + ", " + plz + ort, unterstrich));
         addEmptyLine(start, 1);

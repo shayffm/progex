@@ -54,6 +54,7 @@ public class Test_Lieferschein {
         
         
         start.add(new Paragraph(fax+ "                                                                 "+datum, fett));
+        start.add(new Paragraph(email, fett));
         addEmptyLine(start, 1);
         start.add(new Paragraph(name + ", " + strasseNr + ", " + plz + ort, unterstrich));
         addEmptyLine(start, 1);

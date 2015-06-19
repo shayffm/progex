@@ -84,7 +84,7 @@ public class Test_Lieferschein {
  
         int i = 0;
         String str = "";
-        while (i != 5) {
+        while (i != 3) {
             i++;
             str = String.valueOf(i);
             table.addCell("=" + str + "=");//ABFRAGE DATENBANK

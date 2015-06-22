@@ -27,18 +27,18 @@ public class Test_Lieferschein {
     private static String email = "http://sharnado.com";
     private static String name = "Sharknade Enterprises";
  
-    public static void main(String[] args) {
-        try {
-            Document document = new Document(PageSize.A4, 50, 30, 50, 30);
-            PdfWriter.getInstance(document, new FileOutputStream(FILE));
-            document.open();
-            fill(document);
-            document.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
- 
+//    public static void main(String[] args) {
+//        try {
+//            Document document = new Document(PageSize.A4, 50, 30, 50, 30);
+//            PdfWriter.getInstance(document, new FileOutputStream(FILE));
+//            document.open();
+//            fill(document);
+//            document.close();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+// 
     private static void fill(Document document) throws DocumentException {
  
         //PDF ERSTELLEN

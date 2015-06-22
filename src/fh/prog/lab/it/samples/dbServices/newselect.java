@@ -57,12 +57,14 @@ public class newselect {
 		Statement stmt = conn.createStatement();
 		ResultSet rs = stmt.executeQuery("SELECT * FROM " + table);
 			try {
-				res = sel.doSelect(table);
+				ResultSetMetaData data = rs.getMetaData();
+				colCounter = data.getColumnCount();
 				int i = 1;
 				while(rs.next()){
-					System.out.println(i);
+				spalte = new Vector<String>();
 					for (int j = 1; j <= colCounter; j++) {
 
+						System.out.println("NewSelect For Schleife: " + j );
 						spalte.add(rs.getString(j));	
 					}
 					gesamt.add(spalte);

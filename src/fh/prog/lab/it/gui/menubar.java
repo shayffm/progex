@@ -27,23 +27,23 @@ public class menubar extends JMenuBar {
 	
 	protected menubar(ActionListener listener){
 		add(file);
-		file.add(neu);
-		file.add(exit);
-				exit.setActionCommand("exit");
-				exit.addActionListener(listener);
+			file.add(neu);
+			file.add(exit);
+					exit.setActionCommand("exit");
+					exit.addActionListener(listener);
 		
 		add(settings);
-		settings.add(edit);
-		settings.add(window);
-		
+			settings.add(edit);
+			settings.add(window);
+			
 		
 		add(help);
-		help.add(about);
+			help.add(about);
 		
 		add(debug);
-		debug.add(refresh);
-				refresh.setActionCommand("refresh");
-				refresh.addActionListener(listener);
+			debug.add(refresh);
+					refresh.setActionCommand("refresh");
+					refresh.addActionListener(listener);
 		
 			
 	

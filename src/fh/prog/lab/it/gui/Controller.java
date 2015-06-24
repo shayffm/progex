@@ -37,6 +37,7 @@ public class Controller implements ActionListener{
 			break;
 		case "refresh": main.frame.setVisible(false);
 						main.frame.setVisible(true);
+						main.refresh();
 			break;
 		case "kunden": 	main.home.setVisible(false);
 					   	main.frame.add(main.kunden,BorderLayout.CENTER);

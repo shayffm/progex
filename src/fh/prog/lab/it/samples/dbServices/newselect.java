@@ -27,13 +27,13 @@ public class newselect {
 	 */
 	public Vector<String> getColumnNames(String table) throws SQLException{
 		Vector<String> name = new Vector<String>();
-		
-		/*
-		 * Hier kommt der nicht in den Block rein.. Spuckt nullpointer exception aus 
-		 */
+
 		try {
 
-			res = sel.doSelect(table);
+			String url = urlPrefix + ":" + port + "/";
+			Connection conn = DriverManager.getConnection(url + dbName, userName, password);
+			Statement stmt = conn.createStatement();
+			res = stmt.executeQuery("select * from " + table);
 			ResultSetMetaData data = res.getMetaData();
 			colCounter = data.getColumnCount();
 			for (int i = 0; i < colCounter; i++) {
@@ -49,13 +49,12 @@ public class newselect {
 	public Vector<Vector<String>> getData(String table) throws SQLException{
 		Vector<String> spalte = new Vector<String>();
 		Vector<Vector<String>> gesamt = new Vector<Vector<String>>();
-		/*
-		 * Hier kommt der nicht in den Block rein.. Spuckt nullpointer exception aus 
-		 */
+
+
 		String url = urlPrefix + ":" + port + "/";
 		Connection conn = DriverManager.getConnection(url + dbName, userName, password);
 		Statement stmt = conn.createStatement();
-		ResultSet rs = stmt.executeQuery("SELECT * FROM " + table);
+		ResultSet rs = stmt.executeQuery("select * from " + table);
 			try {
 				ResultSetMetaData data = rs.getMetaData();
 				colCounter = data.getColumnCount();
@@ -63,8 +62,6 @@ public class newselect {
 				while(rs.next()){
 				spalte = new Vector<String>();
 					for (int j = 1; j <= colCounter; j++) {
-
-						System.out.println("NewSelect For Schleife: " + j );
 						spalte.add(rs.getString(j));	
 					}
 					gesamt.add(spalte);

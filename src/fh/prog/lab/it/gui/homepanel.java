@@ -14,7 +14,6 @@ import javax.swing.JPanel;
 
 
 public class homepanel extends JPanel{
-	gui_controller control = new gui_controller();
 	URL kunden;
 	URL vertrieb;
 	ImageIcon produkticon = new ImageIcon("./lib/earth213.png");

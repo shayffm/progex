@@ -22,8 +22,8 @@ public class mainframe{
 	public mainframe(ActionListener listener) throws SQLException{
 		menubar bar = new menubar(listener);
 		home = new homepanel(listener);	
-		produkt = new produktpanel();
-		kunden = new kundenpanel();
+		produkt = new produktpanel(listener);
+		kunden = new kundenpanel(listener);
 		frame.setLayout(new BorderLayout());
 		double width = screenSize.getWidth();
 		double height = screenSize.getHeight();

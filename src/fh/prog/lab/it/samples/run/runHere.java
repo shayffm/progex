@@ -3,7 +3,6 @@ package fh.prog.lab.it.samples.run;
 import java.sql.SQLException;
 
 import fh.prog.lab.it.gui.Controller;
-import fh.prog.lab.it.gui.gui_controller;
 import fh.prog.lab.it.gui.mainframe;
 import fh.prog.lab.it.gui.menubar;
 import fh.prog.lab.it.samples.dbServices.DBServicesInvoker;

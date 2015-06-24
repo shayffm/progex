@@ -34,9 +34,12 @@ public class produktpanel extends JPanel{
 		setLayout(new GridLayout(4,2));
 		table = new JTable(select.getData("Produkt"), select.getColumnNames("Produkt"));
 		add(new JScrollPane((table)));
+
+
 		back.setActionCommand("proback");
 		back.addActionListener(listener);
 		add(back);
+		
 	}
 	
 }

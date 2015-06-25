@@ -1,25 +1,28 @@
 package fh.prog.lab.it.gui;
 
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.Point;
 import java.awt.Toolkit;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.sql.SQLException;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
-import fh.prog.lab.it.samples.dbServices.DBServicesInvoker;
 import fh.prog.lab.it.samples.dbServices.newselect;
 
 public class produktpanel extends JPanel{
 	/**
 	 * 
 	 */
+	Point klick;
 	private static final long serialVersionUID = 1L;
 	JTable table;
 	ImageIcon iconback = new ImageIcon("./lib/back-button.png");
@@ -34,12 +37,45 @@ public class produktpanel extends JPanel{
 		setLayout(new GridLayout(4,2));
 		table = new JTable(select.getData("Produkt"), select.getColumnNames("Produkt"));
 		add(new JScrollPane((table)));
+		table.addMouseListener(new MouseListener(){
 
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				// TODO Auto-generated method stub
+			}
+
+			@Override
+			public void mousePressed(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				if (e.getClickCount() == 2)
+			        new editframe();
+				
+			}
+
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
 
 		back.setActionCommand("proback");
 		back.addActionListener(listener);
 		add(back);
 		
+		
 	}
-	
+
 }

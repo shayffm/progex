@@ -37,6 +37,8 @@ public class produktpanel extends JPanel{
 		setLayout(new GridLayout(4,2));
 		table = new JTable(select.getData("Produkt"), select.getColumnNames("Produkt"));
 		add(new JScrollPane((table)));
+		table.setShowGrid(true);
+		
 		table.addMouseListener(new MouseListener(){
 
 			@Override
@@ -76,6 +78,10 @@ public class produktpanel extends JPanel{
 		add(back);
 		
 		
+	}
+	
+	public boolean isCellEditable(int row, int col){
+		return false;
 	}
 
 }

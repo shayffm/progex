@@ -18,6 +18,8 @@ public class editframe extends JFrame{
 		label = new JLabel("Das ist ein Test");
 		add(panel);
 		panel.add(label);
+		setTitle("EditierFenster");
+		setLocationRelativeTo(null);
 		setSize(300, 500);
 		setVisible(true);
 	}

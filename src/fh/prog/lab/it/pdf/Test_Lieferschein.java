@@ -19,7 +19,7 @@ public class Test_Lieferschein {
     private static Font unterstrich = new Font(Font.FontFamily.TIMES_ROMAN, 8, Font.UNDERLINE);
  
     private static Date datum = new Date();
-    private static String strasseNr = "Goethestraße 1";
+    private static String strasseNr = "Goethestraï¿½e 1";
     private static String plz = "60313";
     private static String ort = "Frankfurt";
     private static String tel = "Tel. +49/(0)69-55555-0";
@@ -27,18 +27,18 @@ public class Test_Lieferschein {
     private static String email = "http://sharnado.com";
     private static String name = "Sharknade Enterprises";
  
-    public static void main(String[] args) {
-        try {
-            Document document = new Document(PageSize.A4, 50, 30, 50, 30);
-            PdfWriter.getInstance(document, new FileOutputStream(FILE));
-            document.open();
-            fill(document);
-            document.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
- 
+//    public static void main(String[] args) {
+//        try {
+//            Document document = new Document(PageSize.A4, 50, 30, 50, 30);
+//            PdfWriter.getInstance(document, new FileOutputStream(FILE));
+//            document.open();
+//            fill(document);
+//            document.close();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+// 
     private static void fill(Document document) throws DocumentException {
  
         //PDF ERSTELLEN
@@ -56,7 +56,7 @@ public class Test_Lieferschein {
         addEmptyLine(start, 1);
         start.add(new Paragraph(name + ", " + strasseNr + ", " + plz + ort, unterstrich));
         addEmptyLine(start, 1);
-        //Hier muss noch eine Datenbank abfragen FÜR Adresse rein von fiku
+        //Hier muss noch eine Datenbank abfragen Fï¿½R Adresse rein von fiku
  
         start.add(new Paragraph("Test"));
         addEmptyLine(start, 1);

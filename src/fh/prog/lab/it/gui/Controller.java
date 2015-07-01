@@ -43,6 +43,12 @@ public class Controller implements ActionListener{
 					   	main.frame.add(main.kunden,BorderLayout.CENTER);
 					   	main.kunden.setVisible(true);
 			break;
+		case "proback":	main.produkt.setVisible(false);
+						main.home.setVisible(true);
+			break;
+		case "kuback":	main.kunden.setVisible(false);
+						main.home.setVisible(true);
+			break;
 		default:
 			break;
 		}

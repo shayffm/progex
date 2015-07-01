@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 
 public class mainframe{
 	Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-	private String title = "Sharknado SynergyBase Beta 0.1";
+	private String title = "Sharknado SynergyBase Beta 1.0";
 	JFrame frame = new JFrame(title);
 	homepanel home; 
 	produktpanel produkt;
@@ -22,8 +22,8 @@ public class mainframe{
 	public mainframe(ActionListener listener) throws SQLException{
 		menubar bar = new menubar(listener);
 		home = new homepanel(listener);	
-		produkt = new produktpanel();
-		kunden = new kundenpanel();
+		produkt = new produktpanel(listener);
+		kunden = new kundenpanel(listener);
 		frame.setLayout(new BorderLayout());
 		double width = screenSize.getWidth();
 		double height = screenSize.getHeight();
@@ -42,6 +42,11 @@ public class mainframe{
 	public static void dispose() {
 		dispose();
 	// TODO Auto-generated method stub
+	}
+	
+	public void refresh(){
+		kunden.table.revalidate();
+		produkt.table.revalidate();
 	}
 
 		
